@@ -145,7 +145,7 @@ export default function ResearchPage() {
             <div className="grid gap-4 sm:grid-cols-2 text-sm text-white/50 leading-6">
               <div>
                 <span className="font-mono text-white/70 mr-2">O-S3</span>
-                "Answer within 50 words." degraded ROUGE-L by 12%. Hard word limits cause models to
+                &ldquo;Answer within 50 words.&rdquo; degraded ROUGE-L by 12%. Hard word limits cause models to
                 truncate answers mid-thought, degrading lexical overlap with reference answers.
               </div>
               <div>
@@ -200,7 +200,7 @@ export default function ResearchPage() {
                 <li className="flex gap-3"><span className="text-white/25 shrink-0">—</span>Primary metric: ROUGE-L (longest common subsequence F1 vs. reference answer)</li>
                 <li className="flex gap-3"><span className="text-white/25 shrink-0">—</span>LLM-as-judge secondary: cross-provider assignment (Claude judges OpenAI/Gemini; GPT judges Anthropic)</li>
                 <li className="flex gap-3"><span className="text-white/25 shrink-0">—</span>Non-inferiority threshold: 5% relative ROUGE-L drop; Wilcoxon signed-rank with Bonferroni correction</li>
-                <li className="flex gap-3"><span className="text-white/25 shrink-0">—</span>Cohen's κ = 0.930 inter-rater agreement between the two cross-provider LLM judges (n=47 overlap items, κ &gt; 0.80 threshold)</li>
+                <li className="flex gap-3"><span className="text-white/25 shrink-0">—</span>Cohen&apos;s κ = 0.930 inter-rater agreement between the two cross-provider LLM judges (n=47 overlap items, κ &gt; 0.80 threshold)</li>
               </ul>
             </div>
 

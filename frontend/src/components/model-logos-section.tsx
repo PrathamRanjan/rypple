@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
@@ -41,7 +41,7 @@ function AnimatedLogo({
   model: (typeof AI_MODELS)[0];
   index: number;
   centerIndex: number;
-  scrollYProgress: any;
+  scrollYProgress: MotionValue<number>;
 }) {
   // Each logo fades up at a slightly offset scroll window — smooth stagger
   const start = 0.05 + index * 0.06;

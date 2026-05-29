@@ -58,7 +58,6 @@ function ModelBar({ model, effectiveOutput, maxMwh, inView, index }: {
 
   useEffect(() => {
     if (!inView) return;
-    setAnimPct(0);
     const t = setTimeout(() => setAnimPct(pct), index * 60);
     return () => clearTimeout(t);
   }, [inView, pct, index]);
