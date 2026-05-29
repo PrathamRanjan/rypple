@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rypple</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="glow"></div>
+
+  <header class="header">
+    <div class="brand">
+      <img src="icons/rypple-logo.png" class="brand-mark" alt="Rypple" aria-hidden="true">
+
+      <div class="brand-text">
+        <span class="brand-name">Rypple</span>
+        <span class="brand-tag">Prompt better. Waste less.</span>
+      </div>
+    </div>
+    <label class="toggle" title="Enable Rypple">
+      <input type="checkbox" id="enabled" checked>
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <section class="block">
+    <div class="label-row">
+      <span class="label">This session</span>
+      <span class="dot" id="status-dot"></span>
+    </div>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-value" id="tokens-saved">0</div>
+        <div class="stat-label">tokens saved</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value accent" id="wh-saved">0.00</div>
+        <div class="stat-label">mWh saved</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="co2-saved">0.000</div>
+        <div class="stat-label">g CO₂ saved</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="calls">0</div>
+        <div class="stat-label">prompts optimised</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <span class="label">Mode</span>
+    <div class="modes">
+      <button class="mode-btn active" data-mode="light">
+        <span class="radio"></span>
+        <span class="mode-body">
+          <span class="mode-name">Light</span>
+          <span class="mode-desc">Appends <em>"Answer briefly."</em> — everyday default.</span>
+        </span>
+      </button>
+      <button class="mode-btn" data-mode="full">
+        <span class="radio"></span>
+        <span class="mode-body">
+          <span class="mode-name">Full</span>
+          <span class="mode-desc">Trims filler + minimal-answer directive — maximum savings.</span>
+        </span>
+      </button>
+      <button class="mode-btn" data-mode="smart">
+        <span class="radio"></span>
+        <span class="mode-body">
+          <span class="mode-name">Smart <span class="badge">API</span></span>
+          <span class="mode-desc">AI-compresses long prompts. Needs an OpenAI key.</span>
+        </span>
+      </button>
+    </div>
+
+    <div id="api-key-section" class="api-key-section hidden">
+      <span class="label">OpenAI API key</span>
+      <input type="password" id="api-key" placeholder="sk-…" autocomplete="off" spellcheck="false">
+      <p class="api-note">Used only to compress long prompts via gpt-4.1-nano. Stored locally — never sent to any Rypple server.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a href="https://github.com/prathamranjann/rypple" target="_blank" rel="noopener">GitHub ↗</a>
+    <span class="footer-meta">Built on the TRIM benchmark</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* Rypple in-page toast — monochrome glass, matched to the website theme. */
+
+#rypple-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  max-width: 380px;
+  padding: 11px 15px;
+  background: rgba(8, 8, 8, 0.86);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
+  animation: rypple-slide-in 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#rypple-toast .rypple-mark {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
+
+#rypple-toast .rypple-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+#rypple-toast .rypple-title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+#rypple-toast .rypple-stats {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.6);
+  font-variant-numeric: tabular-nums;
+}
+
+#rypple-toast .rypple-stats b {
+  font-weight: 600;
+  color: #22c55e;
+}
+
+@keyframes rypple-slide-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #rypple-toast { animation: none; }
+}
