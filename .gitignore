@@ -29,5 +29,5 @@ build/
 out/
 
 # Dev artifacts
-frontend/output/
-output/playwright/
+output/
+
